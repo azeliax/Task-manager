@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TimetableWPF"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="TimetableWPF.MainWindow"
         mc:Ignorable="d"
-        Title="Timetable" Height="754" Width="1146"
+        Title="Timetable" Height="754" Width="1160"
         ResizeMode="NoResize"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
@@ -536,24 +536,22 @@
         FontWeight="Light" 
         BorderBrush="White"
         Style="{StaticResource ButtonStyle}" Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.533,0.736" Grid.RowSpan="2"/>
-            <Label x:Name="MonthName" Content="MONTH" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="339" FontFamily="Verdana" FontSize="33" Foreground="#FFD6A1D4" FontWeight="Heavy" Height="45" Grid.ColumnSpan="3"/>
-            <StackPanel x:Name="DaysPanel"  Orientation="Horizontal" Margin="16,86,16,81" Grid.ColumnSpan="3" />
-            <Button Grid.Column="2" HorizontalAlignment="Left" Margin="171,19,0,0" VerticalAlignment="Top" Height="38" Width="41" Click="Button_Click" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}">
-                <Image Source="C:\project\TimetableWPF\back.png"/>
-            </Button>
-            <Button Grid.Column="2" HorizontalAlignment="Left" Margin="227,19,0,0" VerticalAlignment="Top" Height="38" Width="41" Click="Button_Click_1" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}">
-                <Image Source="C:\project\TimetableWPF\foward.png"/>
-            </Button>
-            <Label Content="Monday" HorizontalAlignment="Left" Height="34" Margin="48,52,0,0" VerticalAlignment="Top" Width="88" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.639,0.457"/>
-            <Label Content="Tuesday" HorizontalAlignment="Left" Height="34" Margin="18,52,0,0" VerticalAlignment="Top" Width="86" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
-            <Label Content="Friday" HorizontalAlignment="Left" Height="34" Margin="498,52,0,0" VerticalAlignment="Top" Width="72" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
-            <Label Content="Wednesday" HorizontalAlignment="Left" Height="34" Margin="167,52,0,0" VerticalAlignment="Top" Width="115" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
-            <Label Content="Thursday" HorizontalAlignment="Left" Height="34" Margin="332,52,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
-            <Label Content="Saturday" HorizontalAlignment="Left" Height="34" Margin="636,52,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
-            <Label Content="Sunday" HorizontalAlignment="Left" Height="34" Margin="804,52,0,0" VerticalAlignment="Top" Width="81" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
-            <Button Grid.Column="2" Content="Month view" HorizontalAlignment="Left" Margin="844,24,0,0" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_2"/>
-            <Button Grid.Column="2" Content="Week view" HorizontalAlignment="Left" Margin="756,24,0,0" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_3"/>
-            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="30,86,16,225" Grid.RowSpan="3"/>
+            <Canvas Background="#FFEAC6E8" Grid.ColumnSpan="3" Margin="-12,17,-12,414">
+                <Label x:Name="MonthName" Content="MONTH" HorizontalAlignment="Left" VerticalAlignment="Top" Width="339" FontFamily="Verdana" FontSize="33" Foreground="#FFD6A1D4" FontWeight="Heavy" Height="45" Grid.ColumnSpan="3" Canvas.Left="10" Canvas.Top="4"/>
+                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="40" Click="Button_Click" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="378" Canvas.Top="7"/>
+                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="41" Click="Button_Click_1" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="458" Canvas.Top="7"/>
+                <Button Grid.Column="2" Content="Month view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_2" Canvas.Left="1057" Canvas.Top="11"/>
+                <Button Grid.Column="2" Content="Week view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_3" Canvas.Left="962" Canvas.Top="11"/>
+            </Canvas>
+            <StackPanel x:Name="DaysPanel"  Orientation="Horizontal" Margin="16,103,16,64" Grid.ColumnSpan="3" />
+            <Label Content="Monday" HorizontalAlignment="Left" Height="34" Margin="56,69,0,0" VerticalAlignment="Top" Width="88" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.639,0.457"/>
+            <Label Content="Tuesday" HorizontalAlignment="Left" Height="34" Margin="20,69,0,0" VerticalAlignment="Top" Width="86" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
+            <Label Content="Friday" HorizontalAlignment="Left" Height="34" Margin="496,69,0,0" VerticalAlignment="Top" Width="72" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
+            <Label Content="Wednesday" HorizontalAlignment="Left" Height="34" Margin="170,69,0,0" VerticalAlignment="Top" Width="115" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
+            <Label Content="Thursday" HorizontalAlignment="Left" Height="34" Margin="338,69,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
+            <Label Content="Saturday" HorizontalAlignment="Left" Height="34" Margin="630,69,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
+            <Label Content="Sunday" HorizontalAlignment="Left" Height="34" Margin="799,69,0,0" VerticalAlignment="Top" Width="81" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
+            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="36,108,10,203" Grid.RowSpan="3"/>
             <TextBox x:Name="textboxevent" HorizontalAlignment="Left" Margin="710,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="26" RenderTransformOrigin="0.513,0.557" BorderBrush="#FFD6A1D4" Foreground="#FFD6A1D4" BorderThickness="2" Grid.Row="2" Grid.Column="2"/>
             <Button x:Name="addevent" Content="Add Event" HorizontalAlignment="Left" Margin="710,89,0,0" VerticalAlignment="Top" Height="28" Width="94" Style="{StaticResource ButtonStyle}" Grid.Row="2" Grid.Column="2" Click="addevent_Click"/>
             <syncfusion:ColorPicker x:Name="ColorPickEvents" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,89,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="2"  />
