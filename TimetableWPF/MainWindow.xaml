@@ -403,7 +403,7 @@
                 <ColumnDefinition Width="27*"/>
                 <ColumnDefinition Width="964*"/>
             </Grid.ColumnDefinitions>
-            <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="30,38,0,0" VerticalAlignment="Top" Height="30" Width="204" SelectedDateChanged="DatePicker_SelectedDateChanged" Background="#FFD6A1D4" BorderThickness="0,0,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FFD6A1D4" FontWeight="Light" Text="Choose date" Grid.ColumnSpan="3" Grid.Row="2">
+            <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="25,17,0,0" VerticalAlignment="Top" Height="30" Width="204" SelectedDateChanged="DatePicker_SelectedDateChanged" Background="#FFD6A1D4" BorderThickness="0,0,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FFD6A1D4" FontWeight="Light" Text="Choose date" Grid.ColumnSpan="3" Grid.Row="2">
                 <DatePicker.CalendarStyle>
                     <Style TargetType="Calendar">
                         <Setter Property="Background" Value="#FFD6A1D4"></Setter>
@@ -543,7 +543,7 @@
                 <Button Grid.Column="2" Content="Month view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_2" Canvas.Left="1057" Canvas.Top="11"/>
                 <Button Grid.Column="2" Content="Week view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_3" Canvas.Left="962" Canvas.Top="11"/>
             </Canvas>
-            <StackPanel x:Name="DaysPanel"  Orientation="Horizontal" Margin="16,103,16,64" Grid.ColumnSpan="3" />
+            <StackPanel x:Name="DaysPanel"  Orientation="Horizontal" Margin="38,103,16,64" Grid.ColumnSpan="3" />
             <Label Content="Monday" HorizontalAlignment="Left" Height="34" Margin="56,69,0,0" VerticalAlignment="Top" Width="88" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.639,0.457"/>
             <Label Content="Tuesday" HorizontalAlignment="Left" Height="34" Margin="20,69,0,0" VerticalAlignment="Top" Width="86" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
             <Label Content="Friday" HorizontalAlignment="Left" Height="34" Margin="496,69,0,0" VerticalAlignment="Top" Width="72" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
@@ -551,7 +551,7 @@
             <Label Content="Thursday" HorizontalAlignment="Left" Height="34" Margin="338,69,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
             <Label Content="Saturday" HorizontalAlignment="Left" Height="34" Margin="630,69,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
             <Label Content="Sunday" HorizontalAlignment="Left" Height="34" Margin="799,69,0,0" VerticalAlignment="Top" Width="81" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
-            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="36,108,10,203" Grid.RowSpan="3"/>
+            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="42,108,0,203" Grid.RowSpan="3"/>
             <TextBox x:Name="textboxevent" HorizontalAlignment="Left" Margin="710,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="26" RenderTransformOrigin="0.513,0.557" BorderBrush="#FFD6A1D4" Foreground="#FFD6A1D4" BorderThickness="2" Grid.Row="2" Grid.Column="2"/>
             <Button x:Name="addevent" Content="Add Event" HorizontalAlignment="Left" Margin="710,89,0,0" VerticalAlignment="Top" Height="28" Width="94" Style="{StaticResource ButtonStyle}" Grid.Row="2" Grid.Column="2" Click="addevent_Click"/>
             <syncfusion:ColorPicker x:Name="ColorPickEvents" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,89,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="2"  />
