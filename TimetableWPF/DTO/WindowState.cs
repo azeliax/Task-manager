@@ -19,59 +19,6 @@ namespace TimetableWPF
         {
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
             File.WriteAllText("tasks.json", json);
-
-
-            //using (var context = new TimetableDbContext())
-            //{
-            //    foreach (var category in categories)
-            //    {
-            //        var existingCategory = context.Categories
-            //            .FirstOrDefault(c => c.CategoryId == category.CategoryId);
-
-            //        if (existingCategory == null)
-            //        {
-            //            context.Categories.Add(category);
-            //        }
-            //        else
-            //        {
-            //            existingCategory.CategoryName = category.CategoryName;
-            //            existingCategory.CategoryColorHex = category.CategoryColorHex;
-            //        }
-            //    }
-
-
-            //    foreach (var task in tasks)
-            //    {
-            //        var existingTask = context.MyTasks
-            //            .FirstOrDefault(t => t.Id == task.Id);
-
-            //        if (existingTask == null)
-            //        {
-            //            var category = context.Categories.FirstOrDefault(c => c.CategoryId == task.CategoryId);
-            //            if (category != null)
-            //            {
-            //                task.CategoryName = category.CategoryName;
-            //            }
-
-            //            context.MyTasks.Add(task);
-            //        }
-            //        else
-            //        {
-            //            existingTask.Name = task.Name;
-            //            existingTask.Date = task.Date;
-            //            existingTask.CategoryId = task.CategoryId;
-            //            existingTask.Importance = task.Importance;
-            //            var category = context.Categories.FirstOrDefault(c => c.CategoryId == task.CategoryId);
-            //            if (category != null)
-            //            {
-            //                existingTask.CategoryName = category.CategoryName;
-            //            }
-            //            existingTask.IsChecked = task.IsChecked;
-            //        }
-            //    }
-
-            //    context.SaveChanges();
-            //}
         }
 
         public static WindowStateJson Load()

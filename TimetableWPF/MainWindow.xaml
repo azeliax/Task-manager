@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TimetableWPF"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="TimetableWPF.MainWindow"
         mc:Ignorable="d"
-        Title="Timetable" Height="754" Width="1160"
+        Title="Timetable" Height="900" Width="1160"
         ResizeMode="NoResize"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
@@ -391,6 +391,7 @@
             <RowDefinition Height="56*"/>
             <RowDefinition Height="168*"/>
             <RowDefinition Height="304*"/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <Grid Margin="10,10,0,0" Height="761" VerticalAlignment="Top" Grid.RowSpan="4">
             <Grid.RowDefinitions>
@@ -403,7 +404,7 @@
                 <ColumnDefinition Width="27*"/>
                 <ColumnDefinition Width="964*"/>
             </Grid.ColumnDefinitions>
-            <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="25,17,0,0" VerticalAlignment="Top" Height="30" Width="204" SelectedDateChanged="DatePicker_SelectedDateChanged" Background="#FFD6A1D4" BorderThickness="0,0,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FFD6A1D4" FontWeight="Light" Text="Choose date" Grid.ColumnSpan="3" Grid.Row="2">
+            <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="42,67,0,0" VerticalAlignment="Top" Height="30" Width="204" SelectedDateChanged="DatePicker_SelectedDateChanged" Background="#FFD6A1D4" BorderThickness="0,0,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FFD6A1D4" FontWeight="Light" Text="Choose date" Grid.ColumnSpan="3" Grid.Row="2">
                 <DatePicker.CalendarStyle>
                     <Style TargetType="Calendar">
                         <Setter Property="Background" Value="#FFD6A1D4"></Setter>
@@ -430,8 +431,8 @@
                     </LinearGradientBrush>
                 </DatePicker.BorderBrush>
             </DatePicker>
-            <syncfusion:ColorPicker x:Name="ColorPick" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,25,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"  />
-            <DataGrid x:Name="gridTasks" AutoGenerateColumns="False" Margin="129,472,0,137" LoadingRow="gridTasks_LoadingRow" IsReadOnly="False" BorderThickness="0,0,0,0" Background="#FFFFFEFE" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" RowDetailsVisibilityMode="Collapsed" CanUserAddRows ="False" VerticalScrollBarVisibility="Hidden" BorderBrush="White" FontFamily="Verdana" VerticalGridLinesBrush="Black" GridLinesVisibility="None" ClipToBounds="True" EnableColumnVirtualization="True" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Width="553" Grid.Column="2" Foreground="White" Grid.RowSpan="3" RowHeaderWidth="0" MouseDoubleClick="dataGrid_MouseDoubleClick">
+            <syncfusion:ColorPicker x:Name="ColorPick" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,94,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="2"  />
+            <DataGrid x:Name="gridTasks" AutoGenerateColumns="False" Margin="129,67,0,26" LoadingRow="gridTasks_LoadingRow" IsReadOnly="False" BorderThickness="0,0,0,0" Background="#FFFFFEFE" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" RowDetailsVisibilityMode="Collapsed" CanUserAddRows ="False" VerticalScrollBarVisibility="Hidden" BorderBrush="White" FontFamily="Verdana" VerticalGridLinesBrush="Black" GridLinesVisibility="None" ClipToBounds="True" EnableColumnVirtualization="True" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Width="553" Grid.Column="2" Foreground="White" RowHeaderWidth="0" MouseDoubleClick="dataGrid_MouseDoubleClick" Grid.Row="2">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -522,11 +523,11 @@
                     </Style>
                 </DataGrid.CellStyle>
             </DataGrid>
-            <TextBox x:Name="CategoryTextBox" HorizontalAlignment="Left" Margin="710,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="22" BorderBrush="#FFD6A1D4" BorderThickness="2" Grid.Column="2" Foreground="#FFD6A1D4" Grid.RowSpan="2"/>
+            <TextBox x:Name="CategoryTextBox" HorizontalAlignment="Left" Margin="710,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="22" BorderBrush="#FFD6A1D4" BorderThickness="2" Grid.Column="2" Foreground="#FFD6A1D4" Grid.Row="2"/>
             <Button x:Name="AddCategory" 
         HorizontalAlignment="Left" 
         Content="Add Category"
-        Margin="710,25,0,0" 
+        Margin="710,94,0,0" 
         VerticalAlignment="Top" 
         Height="28" 
         Width="94" 
@@ -535,11 +536,15 @@
         FontSize="12" 
         FontWeight="Light" 
         BorderBrush="White"
-        Style="{StaticResource ButtonStyle}" Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.533,0.736" Grid.RowSpan="2"/>
+        Style="{StaticResource ButtonStyle}" Grid.Column="2" Grid.Row="2" RenderTransformOrigin="0.533,0.736"/>
             <Canvas Background="#FFEAC6E8" Grid.ColumnSpan="3" Margin="-12,17,-12,414">
                 <Label x:Name="MonthName" Content="MONTH" HorizontalAlignment="Left" VerticalAlignment="Top" Width="339" FontFamily="Verdana" FontSize="33" Foreground="#FFD6A1D4" FontWeight="Heavy" Height="45" Grid.ColumnSpan="3" Canvas.Left="10" Canvas.Top="4"/>
-                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="40" Click="Button_Click" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="378" Canvas.Top="7"/>
-                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="41" Click="Button_Click_1" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="458" Canvas.Top="7"/>
+                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="40" Click="Button_Click" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="378" Canvas.Top="7">
+                    <Image Source="/images/back.png" />
+                </Button>
+                <Button Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="41" Click="Button_Click_1" Background="White" BorderThickness="0" Style="{StaticResource ButtonStyle}" Canvas.Left="458" Canvas.Top="7">
+                    <Image Source="/images/foward.png" />
+                </Button>
                 <Button Grid.Column="2" Content="Month view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_2" Canvas.Left="1057" Canvas.Top="11"/>
                 <Button Grid.Column="2" Content="Week view" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}" Width="74" Click="Button_Click_3" Canvas.Left="962" Canvas.Top="11"/>
             </Canvas>
@@ -551,11 +556,11 @@
             <Label Content="Thursday" HorizontalAlignment="Left" Height="34" Margin="338,69,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" Grid.Column="2"/>
             <Label Content="Saturday" HorizontalAlignment="Left" Height="34" Margin="630,69,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
             <Label Content="Sunday" HorizontalAlignment="Left" Height="34" Margin="799,69,0,0" VerticalAlignment="Top" Width="81" FontSize="18" FontFamily="Verdana" Foreground="#FFD6A1D4" RenderTransformOrigin="0.444,0.604" Grid.Column="2"/>
-            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="42,108,0,203" Grid.RowSpan="3"/>
-            <TextBox x:Name="textboxevent" HorizontalAlignment="Left" Margin="710,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="26" RenderTransformOrigin="0.513,0.557" BorderBrush="#FFD6A1D4" Foreground="#FFD6A1D4" BorderThickness="2" Grid.Row="2" Grid.Column="2"/>
-            <Button x:Name="addevent" Content="Add Event" HorizontalAlignment="Left" Margin="710,89,0,0" VerticalAlignment="Top" Height="28" Width="94" Style="{StaticResource ButtonStyle}" Grid.Row="2" Grid.Column="2" Click="addevent_Click"/>
-            <syncfusion:ColorPicker x:Name="ColorPickEvents" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,89,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="2"  />
-            <DataGrid x:Name="gridEvents" AutoGenerateColumns="False" Margin="129,122,0,14" IsReadOnly="False" BorderThickness="0,0,0,0" Background="#FFFFFEFE" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" RowDetailsVisibilityMode="Collapsed" CanUserAddRows ="False" VerticalScrollBarVisibility="Hidden" BorderBrush="White" FontFamily="Verdana" VerticalGridLinesBrush="Black" GridLinesVisibility="None" ClipToBounds="True" EnableColumnVirtualization="True" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Width="553" Grid.Column="2" Foreground="White" Grid.Row="2" LoadingRow="gridEvents_LoadingRow" RowHeaderWidth="0"  MouseDoubleClick="dataGrid_MouseDoubleClick">
+            <WrapPanel x:Name="WrapPanelDays" Grid.ColumnSpan="3" Margin="42,108,0,206" Grid.RowSpan="3"/>
+            <TextBox x:Name="textboxevent" HorizontalAlignment="Left" Margin="710,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="26" RenderTransformOrigin="0.513,0.557" BorderBrush="#FFD6A1D4" Foreground="#FFD6A1D4" BorderThickness="2" Grid.Row="2" Grid.Column="2"/>
+            <Button x:Name="addevent" Content="Add Event" HorizontalAlignment="Left" Margin="710,190,0,0" VerticalAlignment="Top" Height="28" Width="94" Style="{StaticResource ButtonStyle}" Grid.Row="2" Grid.Column="2" Click="addevent_Click"/>
+            <syncfusion:ColorPicker x:Name="ColorPickEvents" Brush="{Binding ColorCell, Mode=TwoWay}" HorizontalAlignment="Left" Margin="820,190,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.251" Height="28" BorderBrush="White" Background="#FFD6A1D4" FontFamily="Verdana" FontWeight="Light" Foreground="White" Grid.Column="2" Grid.Row="2"  />
+            <DataGrid x:Name="gridEvents" AutoGenerateColumns="False" Margin="127,243,0,-107" IsReadOnly="False" BorderThickness="0,0,0,0" Background="#FFFFFEFE" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" RowDetailsVisibilityMode="Collapsed" CanUserAddRows ="False" VerticalScrollBarVisibility="Hidden" BorderBrush="White" FontFamily="Verdana" VerticalGridLinesBrush="Black" GridLinesVisibility="None" ClipToBounds="True" EnableColumnVirtualization="True" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Width="552" Grid.Column="2" Foreground="White" Grid.Row="2" LoadingRow="gridEvents_LoadingRow" RowHeaderWidth="0"  MouseDoubleClick="dataGrid_MouseDoubleClick">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Visibility" Value="Collapsed"/>
